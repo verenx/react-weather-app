@@ -11,7 +11,7 @@ export default function WeatherInfo() {
       </div>
       <div className="row">
         <div className="col-6">
-          <img src="" alt="" />
+          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="weather icon" />
           <p>6 <a href="">°C</a> <a href="">°F</a></p>
         </div>
         <div className="col-6">
