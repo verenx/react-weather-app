@@ -15,7 +15,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       feelsLike: response.data.main.feels_like,
       icon: response.data.weather[0].icon,
-      iconUrl: `https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png`,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000)
     })
     setLoaded(true);
@@ -25,7 +25,6 @@ export default function Weather(props) {
     const apiKey = "0a521eaf234a3a56f45252fac3c737ad";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);  
-  
   }
 
   function handleSubmit(event) {
@@ -42,7 +41,7 @@ const [loaded, setLoaded] = useState(false);
 const [weatherData, setWeatherData] = useState({});
 const [city, setCity] = useState(props.defaultCity);
 
- 
+
 if (loaded) {
   return (
     <div className="Weather">
@@ -64,10 +63,9 @@ if (loaded) {
       </form>
       <WeatherInfo data={weatherData} />
     </div>
-      
     );
 } else {
- 
+  search(city);
   return ("Loading..");
 }
 }

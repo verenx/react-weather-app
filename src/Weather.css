@@ -8,55 +8,18 @@
     background-color: #303134;
     border: 1px solid #303134;
     color:  #e8eaed;
+    line-height: 1.5;
 }
 
 input[type="search"]::placeholder {
     color: #e8eaed;
+    font-size: 15px;
 }
 
 .Weather .search-button {
     background-color: #e8eaed;
-    border: 1px solid #e8eaed;
     color: #303134;
+    line-height: 1.5;
+    font-size: 15px;
 }
 
-.Weather h1 {
-    color: #e8eaed;
-    font-size: 32px;
-    line-height: 26px;
-    margin-top: 20px;
-}
-
-.Weather ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.Weather li {
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.Weather img {
-    display: inline-block;
-    position: relative;
-    top: -5px;
-}
-
-.Weather .current-temperature {
-    font-size: 48px;
-    line-height: 24px;
-    padding-left: 10px;
-    position: relative;
-    top: 8px;
-}
-
-.Weather .unit {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 24px;
-    padding-left: 6px;
-    position: relative;
-    top: -15px;
-}
