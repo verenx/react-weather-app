@@ -15,7 +15,6 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       feelsLike: response.data.main.feels_like,
       icon: response.data.weather[0].icon,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000)
     })
     setLoaded(true);
